@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GestionComponent } from './pages/gestion/gestion.component';
-import { ReservasComponent } from './pages/reservas/reservas.component';
-import { TestComponent } from './components/test/test.component';
+import { AdminRoutingModule } from './admin-routing.module';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { EditCatalogueComponent } from './pages/edit-catalogue/edit-catalogue.component';
+import { InventoryComponent } from './pages/inventory/inventory.component';
 
 
 
 @NgModule({
   declarations: [
-    GestionComponent,
-    ReservasComponent,
-    TestComponent
+    DashboardComponent,
+    EditCatalogueComponent,
+    InventoryComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AdminRoutingModule
   ]
 })
 export class UserAdminModule { }

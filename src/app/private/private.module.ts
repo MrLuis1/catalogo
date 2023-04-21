@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminViewComponent } from './pages/admin-view/admin-view.component';
-import { ReservasComponent } from './pages/reservas/reservas.component';
-import { GestionComponent } from './pages/gestion/gestion.component';
+import { PrivateRoutingModule } from './private-routing.module';
 
 
 
 @NgModule({
-  declarations: [
-    AdminViewComponent,
-    ReservasComponent,
-    GestionComponent
-  ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrivateRoutingModule
   ]
 })
 export class PrivateModule { }

@@ -1,1 +1,33 @@
-<p>login works!</p>
+<section>
+  <div class="login-container">
+    <aside class="background">
+
+    </aside>
+
+    <aside class="form">
+      <h3>Login</h3>
+      
+      <form [formGroup]="login" (ngSubmit)="checkLogin(login)">
+        <mat-form-field appearance="outline">
+            <mat-label>Usuario/Correo</mat-label>
+            <input matInput type="email" formControlName="email">
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" formControlName="password">
+            <mat-icon matSuffix>keyt</mat-icon>
+          </mat-form-field>
+    
+          <button mat-fab extended color="primary" [disabled]="!login.valid">
+              <mat-icon>login</mat-icon>
+              Ingresar
+          </button>
+
+          <span>¿No tienes cuenta? <b routerLink="/core/registro">Registrate.</b></span>
+      </form>
+    </aside>
+  </div>
+</section>
+
+

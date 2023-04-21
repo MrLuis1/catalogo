@@ -1,1 +1,65 @@
-<p>register works!</p>
+<section>
+    <div class="container">
+        <div class="profile-img">
+            <img src="../../../../assets/img/blank-profile-picture-973460_960_720.webp" alt="" class="profile">
+        </div>
+    
+        <div class="form-container">
+            <form [formGroup]="register" (ngSubmit)="createUser(register)">
+                <ng-container>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre de usuario</mat-label>
+                        <input matInput type="text" formControlName="username">
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                    </mat-form-field>
+        
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre y Apellido</mat-label>
+                        <input matInput type="text" formControlName="fullName">
+                        <mat-icon matSuffix>badge</mat-icon>
+                    </mat-form-field>
+                </ng-container>
+        
+                <ng-container>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Correo</mat-label>
+                        <input matInput type="email" formControlName="email">
+                        <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+        
+                    <mat-form-field appearance="fill">
+                        <mat-label>Confirmar correo</mat-label>
+                        <input matInput type="email" formControlName="emailConfirm">
+                        <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+                </ng-container>
+          
+                <ng-container>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" formControlName="password">
+                        <mat-icon matSuffix>keyt</mat-icon>
+                    </mat-form-field>
+              
+                    <mat-form-field appearance="fill">
+                        <mat-label>Confirmar contraseña</mat-label>
+                        <input matInput type="password" formControlName="passwordConfirm">
+                        <mat-icon matSuffix>keyt</mat-icon>
+                    </mat-form-field>
+                </ng-container>
+            
+                <button mat-fab extended color="primary" [disabled]="!register.valid" class="featured">
+                    <mat-icon>how_to_reg</mat-icon>
+                    Registrar
+                </button>
+
+                <div class="featured linkLogin">
+                    <span>¿Ya tienes cuenta? <b routerLink="/core/login">Ingresa.</b></span>
+                </div>
+            </form>
+        </div>
+    </div>
+  </section>
+  
+  
+  
