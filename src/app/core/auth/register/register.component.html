@@ -11,7 +11,7 @@
             <form [formGroup]="register" (ngSubmit)="createUser(register)">
                 <ng-container>
                     <mat-form-field appearance="fill">
-                        <mat-label>Empresa/Emprendimiento</mat-label>
+                        <mat-label>Empresa</mat-label>
                         <input matInput type="text" formControlName="companyName">
                         <mat-icon matSuffix>account_circle</mat-icon>
                         <mat-error *ngIf="register.invalid">
