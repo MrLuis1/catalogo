@@ -1,0 +1,41 @@
+.product-added {
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+}
+
+.list {
+    width: 100%;
+}
+
+.list-item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-btn {
+    width: auto;
+    border-radius: 50px;
+    margin-top: 10px;
+    background-color: rgb(217, 160, 17) !important;
+}
+
+.icon {
+    width: 150px;
+}
+
+.product-added > h4 {
+    color: #808080;
+}

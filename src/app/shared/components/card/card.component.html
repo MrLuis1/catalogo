@@ -1,1 +1,37 @@
-<p>card works!</p>
+<section class="card-container">
+  <mat-card *ngFor="let card of cards" class="card">
+    <mat-card-header>
+      <div class="discount-tag" *ngIf="card.discountPercent">
+        <span>{{ card.discountPercent }}%</span>
+      </div>
+      <img mat-card-avatar class="header-image" [src]="card.headerImg">
+      <mat-card-title>{{ card.title }}</mat-card-title>
+      <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <img mat-card-image [src]="card.bodyImg" alt="Photo of a Shiba Inu" class="card-img">
+
+    <mat-card-content *ngIf="!card.priceDiscount && !card.discountPercent">
+      <span class="amount-product">
+        {{card.price | currency}}
+      </span>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="card.priceDiscount && card.discountPercent">
+      <span class="amount-product">
+        {{card.priceDiscount| currency}}
+      </span>
+
+      <span class="old-price">
+        <del>{{card.price | currency}}</del>
+      </span>
+    </mat-card-content>
+
+    <div class="cards-btn">
+      <button mat-button (click)="getSelectedProduct(card)">
+        {{'agregar' | uppercase}}
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+</section>

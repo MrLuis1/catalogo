@@ -12,22 +12,36 @@
             <mat-label>Usuario/Correo</mat-label>
             <input matInput type="email" formControlName="email">
             <mat-icon matSuffix>mail</mat-icon>
+            <mat-error *ngIf="!login.valid">
+              * El campo es requerido
+            </mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Contraseña</mat-label>
             <input matInput type="password" formControlName="password">
             <mat-icon matSuffix>keyt</mat-icon>
+            <mat-error *ngIf="!login.valid">
+              * La contraseña debe incluir números y letras.
+            </mat-error>
+            
           </mat-form-field>
     
-          <button mat-fab extended color="primary" [disabled]="!login.valid">
+          <button mat-fab extended color="primary" [disabled]="login.invalid">
               <mat-icon>login</mat-icon>
               Ingresar
           </button>
 
-          <span>¿No tienes cuenta? <b routerLink="/core/registro">Registrate.</b></span>
+          <mat-error class="postError" *ngIf="showError">
+            <mat-icon matSuffix>error</mat-icon>
+            <span>Datos inválidos, por favor verifique.</span>
+          </mat-error>
+
+          <span>¿No tienes cuenta? <b routerLink="/core/registro">Regístrate.</b></span>
       </form>
     </aside>
   </div>
+  <app-loader *ngIf="showLoader"></app-loader>
 </section>
+
 
 

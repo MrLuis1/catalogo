@@ -1,0 +1,75 @@
+.view-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.user-content {
+    display: flex;
+    width: 100%;
+}
+
+.user-media {
+    margin-left: 10%;
+}
+
+.userData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.user-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.userList > li {
+    list-style: none;
+    display: flex;    
+    align-items: center;
+}
+
+.userList > li > mat-icon {
+    margin-right: 3%;
+}
+
+app-categories {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 30px;
+}
+
+.view-container > .product-container {
+    margin-top: 20px;
+    align-self: center;
+}
+
+.buy-card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    box-shadow: -2px 0px 6px -1px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -2px 0px 6px -1px rgba(0,0,0,0.78);
+    -moz-box-shadow: -2px 0px 6px -1px rgba(0,0,0,0.78);
+}
+
+.social-media {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.social-icon {
+    width: 25px;
+}
