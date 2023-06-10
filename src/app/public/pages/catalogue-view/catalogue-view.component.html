@@ -1,29 +1,22 @@
 <main class="view-container">
-    <div class="view-content">
-        <section class="user-content">
-            <div class="user-media">
-                <img [src]="userData.logoImg" [alt]="userData.name" class="user-img">
-            </div>
-            <div class="userData">
-                <ul class="userList">
-                    <li>
-                        <mat-icon>store</mat-icon>
-                        <span>{{userData.empresa}}</span>
-                    </li>
-                    <li>
-                        <mat-icon>badge</mat-icon>
-                        <span>{{userData.name}}</span>
-                    </li>
-                    <li>
-                        <mat-icon>pin_drop</mat-icon>
-                        <span>{{userData.direction}}</span>
-                    </li>
-                    <li>
-                        <mat-icon>call</mat-icon>
-                        <span>{{userData.phoneCall}}</span>
-                    </li>
-                </ul>
-            </div>
+    <div class="flex-container">
+        <section class="nav-view">
+            <form   class="search-form" 
+                    [formGroup]="searchForm" 
+                    #searchButton>
+        
+                <input  type="text" 
+                        placeholder="Busca lo que desees" 
+                        class="search-btn" 
+                        formControlName="searchProduct">
+        
+                <button class="search-btns" 
+                        (click)="toggleBtn()">
+                    <mat-icon *ngIf="!searchActive">search</mat-icon>
+                    <mat-icon *ngIf="searchActive">close</mat-icon>
+                </button>
+            </form>
+        
             <div class="social-media">
                 <a href="">
                     <img src="../../../../assets/img/instagram.png" alt="" class="social-icon">
@@ -33,19 +26,43 @@
                 </a>
             </div>
         </section>
-
-        <section class="categorie-container">
-            <app-categories></app-categories>
-        </section>
-
-        <section class="product-container">
+    
+        <div class="view-content">
+            <section class="user-content">
+                <div class="user-media">
+                    <img [src]="userData.logoImg" [alt]="userData.name" class="user-img">
+                </div>
+                <div class="userData">
+                    <ul class="userList">
+                        <li>
+                            <span class="work-name">{{userData.empresa}}</span>
+                        </li>
+                        <li>
+                            <!-- TODO: COLOCAR LA DESCRIPCIÓN DE LA TIENDA MEJOR -->
+                            <span>{{userData.name}}</span>
+                        </li>
+                        <li>
+                            <mat-icon>pin_drop</mat-icon>
+                            <span>{{userData.direction}}</span>
+                        </li>
+                        <li>
+                            <mat-icon>call</mat-icon>
+                            <span>{{userData.phoneCall}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section class="categorie-container">
+                <app-categories></app-categories>
+            </section>
+    
             <app-card></app-card>
-        </section>
+        </div>
     </div>
 
-    <aside class="buy-card">
-        <app-buy-car></app-buy-car>
-    </aside>
+    <app-buy-car></app-buy-car>
+
 </main>
 
 

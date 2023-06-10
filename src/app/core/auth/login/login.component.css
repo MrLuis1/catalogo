@@ -5,6 +5,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('../../../../assets/img/bg-01.jpg');
+    background-size: cover;
 }
 
 mat-label {

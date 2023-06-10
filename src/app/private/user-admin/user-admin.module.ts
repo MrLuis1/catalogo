@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { EditCatalogueComponent } from './pages/edit-catalogue/edit-catalogue.component';
-import { InventoryComponent } from './pages/inventory/inventory.component';
+import { EditCatalogueComponent } from './components/edit-catalogue/edit-catalogue.component';
+import { InventoryComponent } from './components/inventory/inventory.component';
 
 
 
@@ -11,7 +11,7 @@ import { InventoryComponent } from './pages/inventory/inventory.component';
   declarations: [
     DashboardComponent,
     EditCatalogueComponent,
-    InventoryComponent,
+    InventoryComponent
   ],
   imports: [
     CommonModule,

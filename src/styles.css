@@ -10,6 +10,4 @@ html, body {
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 18px;
-    background-image: url('./assets/img/bg-01.jpg');
-    background-size: cover;
 }

@@ -8,6 +8,7 @@ import { MaterialModule } from '../material/material.module';
 import { BuysComponent } from './pages/buys/buys.component';
 import { CuponesComponent } from './components/cupones/cupones.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,6 +22,7 @@ import { InputSearchComponent } from './components/input-search/input-search.com
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     PublicRoutingModule,
     SharedModule,
     MaterialModule

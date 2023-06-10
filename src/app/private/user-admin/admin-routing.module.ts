@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { EditCatalogueComponent } from './pages/edit-catalogue/edit-catalogue.component';
+import { EditCatalogueComponent } from './components/edit-catalogue/edit-catalogue.component';
 
 const routes: Routes = [
   {
